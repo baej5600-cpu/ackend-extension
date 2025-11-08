@@ -18,29 +18,8 @@ Spring Boot 기반의 RESTful 백엔드 구조를 확장 가능한 형태로 세
 - 로컬 실행 포트: 8080
 
 - 📂 주요 디렉터리 구조
-src/main/java/com/example/backendextension/
-├── controller/
-│ ├── ReservationController.java # 예약 API (GET /api/예약)
-│ ├── PlaceController.java # 장소 API (GET /api/장소)
-│ ├── ReviewController.java # 리뷰 API (GET /api/리뷰)
-│ └── ShareController.java # 공유 API (GET /api/공유)
-│
-├── service/
-│ ├── ReservationService.java # 예약 더미 데이터 제공
-│ ├── PlaceService.java # 장소 리스트 반환
-│ ├── ReviewService.java # 리뷰 리스트 반환
-│ └── ShareService.java # 공유 리스트 반환
-│
-├── dto/
-│ ├── ReservationDto.java
-│ ├── PlaceDto.java
-│ ├── ReviewDto.java
-│ └── ShareDto.java
-│
-├── config/
-│ └── OpenApiConfig.java # Swagger 설정
-│
-└── BackendExtensionApplication.java # Spring Boot main 진입점
+src/main/java/com/example/backendextension/ ├── controller/ ├── ReservationController.java
+
 
 
 🧰 사용 기술
