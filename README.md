@@ -76,8 +76,8 @@ C:\ffmpeg\ffmpeg-8.0-essentials_build\bin\ffmpeg.exe \
 항목	내용
 | 항목    | 내용                         |
 | ----- | -------------------------- |
-| 변환 결과 | ✅ output.wav 생성 완료         |
-| 포맷    | mono / 16000Hz / PCM_s16le |
+| **변환 결과** | ✅ output.wav 생성 완료         |
+| **포맷**    | mono / 16000Hz / PCM_s16le |
 
 
 
