@@ -69,19 +69,17 @@ X-CLOVASPEECH-API-KEY: <API Key>
 
 ## 🎧 음성 파일 전처리 (FFmpeg)
 
-## 🎧 음성 파일 전처리 (FFmpeg)
-
 ```bash
 C:\ffmpeg\ffmpeg-8.0-essentials_build\bin\ffmpeg.exe \
  -i "음성테스트 1.wav" \
  -ac 1 -ar 16000 -acodec pcm_s16le "output.wav"
 항목	내용
-변환 결과	✅ output.wav 생성 완료
-포맷	mono / 16000Hz / PCM_s16le
+| 항목    | 내용                         |
+| ----- | -------------------------- |
+| 변환 결과 | ✅ output.wav 생성 완료         |
+| 포맷    | mono / 16000Hz / PCM_s16le |
 
-✅ 변환 후 output.wav 생성 완료
 
-포맷: mono / 16000Hz / PCM_s16le
 
 🧭 Swagger 테스트 URL
 | 기능         | 요청 경로                                                                          | 설명                  |
