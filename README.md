@@ -69,7 +69,7 @@ X-CLOVASPEECH-API-KEY: <API Key>
 
 ## 🎧 음성 파일 전처리 (FFmpeg)
 
-> CLOVA Speech API는 반드시 `mono 16kHz PCM_s16le` 포맷을 요구합니다.
+CLOVA Speech API는 반드시 `mono 16kHz PCM_s16le` 포맷을 요구합니다.
 
 변환 명령어 (Windows PowerShell 기준):
 
