@@ -69,42 +69,46 @@ X-CLOVASPEECH-API-KEY: <API Key>
 
 ## 🎧 음성 파일 전처리 (FFmpeg)
 
-CLOVA Speech API는 반드시 `mono 16kHz PCM_s16le` 포맷을 요구합니다.
-
-변환 명령어 (Windows PowerShell 기준):
+## 🎧 음성 파일 전처리 (FFmpeg)
 
 ```bash
 C:\ffmpeg\ffmpeg-8.0-essentials_build\bin\ffmpeg.exe \
--i "음성테스트 1.wav" \
--ac 1 -ar 16000 -acodec pcm_s16le \
-"output.wav"
+ -i "음성테스트 1.wav" \
+ -ac 1 -ar 16000 -acodec pcm_s16le "output.wav"
+항목	내용
+변환 결과	✅ output.wav 생성 완료
+포맷	mono / 16000Hz / PCM_s16le
 
 ✅ 변환 후 output.wav 생성 완료
 
 포맷: mono / 16000Hz / PCM_s16le
 
-🌐 Swagger 테스트 URL
-기능	요청 경로	설명
-Swagger UI	http://localhost:8081/swagger-ui.html
-	API 테스트 페이지
-OCR API	POST /api/ocr/upload	이미지 파일 업로드 후 텍스트 반환
-Speech API	POST /api/speech/stt	음성 파일 업로드 후 텍스트 반환
+🧭 Swagger 테스트 URL
+| 기능         | 요청 경로                                                                          | 설명                  |
+| ---------- | ------------------------------------------------------------------------------ | ------------------- |
+| Swagger UI | [http://localhost:8081/swagger-ui.html](http://localhost:8081/swagger-ui.html) | API 테스트 페이지         |
+| OCR API    | `POST /api/ocr/upload`                                                         | 이미지 파일 업로드 후 텍스트 반환 |
+| Speech API | `POST /api/speech/stt`                                                         | 음성 파일 업로드 후 텍스트 반환  |
 
 📊 현재 상태 요약
-항목	상태	비고
-OCR API	✅ 정상 동작	텍스트 인식 성공
-STT API	⚠ 500 오류	CLOVA 응답 문제 (파일·요청 포맷은 정상)
-FFmpeg 변환	✅ 완료	16kHz mono 변환 성공
-Swagger UI	✅ 완료	테스트 정상 작동
-GitHub 업로드	✅ 완료	Private Repo 생성 완료
+| 항목         | 상태       | 비고                      |
+| ---------- | -------- | ----------------------- |
+| OCR API    | ✅ 정상 동작  | 텍스트 인식 성공               |
+| STT API    | ⚠ 500 오류 | CLOVA 응답 문제 (요청 포맷은 정상) |
+| FFmpeg 변환  | ✅ 완료     | 16kHz mono 변환 성공        |
+| Swagger UI | ✅ 완료     | 로컬 테스트 정상 작동            |
+| GitHub 업로드 | ✅ 완료     | Private Repo 생성 완료      |
+
 
 🔮 다음 단계 (백엔드 기능 확장 계획)
-기능	설명
-🗓 예약하기	사용자 예약 등록 및 조회 API
-🔍 검색/지도	Kakao 또는 Naver Map API 연동
-📤 공유하기	게시판 콘텐츠 공유 기능
-💬 게시판	사용자 리뷰 CRUD 구현
-💻 프론트 연동	React 또는 JSP/Servlet 기반 연결 예정
+| 기능        | 설명                            |
+| --------- | ----------------------------- |
+| 🗓 예약하기   | 사용자 예약 등록 및 조회 API            |
+| 🔍 검색/지도  | Kakao 또는 Naver Map API 연동     |
+| 📤 공유하기   | 게시판 콘텐츠 공유 기능                 |
+| 💬 게시판    | 사용자 리뷰 CRUD 구현                |
+| 💻 프론트 연동 | React 또는 JSP/Servlet 기반 연결 예정 |
+
 
 
 
